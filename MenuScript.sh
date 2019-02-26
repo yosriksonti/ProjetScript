@@ -1,4 +1,7 @@
 #!/bin/bash
+source option-l.sh
+source option-lsort.sh
+source option-d.sh
 
 
 if [[ $# -eq 0 ]]; then
@@ -17,13 +20,13 @@ fi
 case "$Choix" in
 	
 	"-l")	
-		echo "1"
+		option-l
 		;;
 	"-lsort")
-		echo "2"
+		option-lsort
 		;;
 	"-d")
-		echo "3"
+		option-d
 		;;
 	"-c")
 		echo "4"
@@ -33,4 +36,3 @@ case "$Choix" in
 		;;
 esac
 
-echo "$Choix"
