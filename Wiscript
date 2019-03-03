@@ -1,0 +1,40 @@
+.\" Manpage for WiScript.
+.\" Contact Contact@olympians.ovh to correct errors or typos.
+.TH man 8 "03 Mar 2019" "0.1.69" "WiScript man page"
+.SH NAME
+WiScript \- Simple Wifi tool
+.SH SYNOPSIS
+WiScript [-version][-v][-help][-h][-l]
+[-lsort][-c][-d]
+.SH DESCRIPTION
+WiScript is simple shell script to manage wireless  network with GU interface
+or via basic commands .
+.SH OPTIONS
+  -version ,-v
+    Check script version.
+
+  -l
+    List available wireless
+
+  -lsort
+    List available wireless AP sorted by signal intensity.
+
+  -d
+    Disable networking
+
+  -c
+    Manually Connect to an available AP.
+
+  -help, -h
+    Show help
+
+.SH BUGS
+No known bugs
+.SH Version
+WiScript v0.1.69
+.SH AUTHOR
+Yosri Kossontini
+Bessem Bousselmi
+.SH COPYRIGHT
+Olympians team © 2019
+www.Olympians.ovh
