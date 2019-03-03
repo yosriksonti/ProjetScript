@@ -5,3 +5,7 @@ function  Help () {
   echo -e "${YELLOW}-d: ${NC} Disactiver le service NetworkManager."
   echo -e "${YELLOW}-c: ${NC} Configurer manuellement l'accès a un point d'acces."
 }
+
+function version() {
+  echo "WiScript version 0.1.69"
+}

@@ -69,6 +69,10 @@ case "$Choix" in
 		Help
 		exit
 		;;
+	"-version" | "-v")
+	 		version
+	 		exit
+	 		;;
 	"1")
 		option-l
 		;;
