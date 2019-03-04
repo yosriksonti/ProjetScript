@@ -10,4 +10,6 @@ function  option-d() {
   echo -ne '#######################   (100%)\r'
   echo -ne '\n \n'
   echo -e "${YELLOW} Désactivé avec success !"
+  #interface=$(iw dev | awk '$1=="Interface"{print $2}')
+  #sudo ifconfig $interface down
 }

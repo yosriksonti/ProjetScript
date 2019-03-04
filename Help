@@ -1,0 +1,9 @@
+WiScript
+
+[-version][-v][-help][-h][-l] [-lsort][-c][-d]
+
+-l:  Lister les différents points d'acces wifi.
+-lsort:  Lister les points d'acces wifi par ordre decroissant d'intensite de signal.
+-d:  Disactiver le service NetworkManager.
+-c:  Configurer manuellement l'accès a un point d'acces.
+-v:  Version courante

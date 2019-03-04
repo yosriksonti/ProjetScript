@@ -4,6 +4,7 @@ function  Help () {
   echo -e "${YELLOW}-lsort: ${NC} Lister les points d'acces wifi par ordre decroissant d'intensite de signal."
   echo -e "${YELLOW}-d: ${NC} Disactiver le service NetworkManager."
   echo -e "${YELLOW}-c: ${NC} Configurer manuellement l'accès a un point d'acces."
+  echo -e "${YELLOW}-v: ${NC} Version courante."
 }
 
 function version() {

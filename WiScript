@@ -36,7 +36,7 @@ echo -e "${YELLOW} 4: ${NC} Configurer manuellement l'accès a un point d'acces.
 echo -e "${YELLOW} 5: ${NC} Help."
 echo -e "${YELLOW} 6: ${NC} Exit."
 fi
-while [[ true ]]; do
+while true ; do
 	#statements
 
 if [[ $# -eq 0 ]]; then

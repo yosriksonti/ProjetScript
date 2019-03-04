@@ -1,0 +1,41 @@
+#!/bin/bash
+source option-h.sh
+logo="
+
+                 _    _  __  ___   ___  ____  __  ____  ___
+                ( \/\/ )/  )| __) / __)(  _ \/  )(  _ \(__ )
+                 )    (  )( |__ \( (__  )   / )(  )___/ / /
+                (__/\__)(__)(___/ \___)(_)\_)(__)(__)  (_/
+"
+
+OPTION=$(whiptail --title "WiScript tool" --menu "     $logo \n \n" 25 78 8 \
+"1" "Lister les différents AP." \
+"2" "Lister les AP par ordre decroissant d'intensite de signal." \
+"3" "Disactiver le service NetworkManager." \
+"4" "Configurer manuellement l'accès a un AP." \
+"5" "Help."  3>&1 1>&2 2>&3)
+
+exitstatus=$?
+if [ $exitstatus = 0 ]; then
+
+    case "$OPTION" in
+      "1")
+      echo "test1"
+      ;;
+      "2")
+      echo "test2"
+      ;;
+      "3")
+      echo "test2"
+      ;;
+      "4")
+      echo "test2"
+      ;;
+      "5")
+      whiptail --textbox --scrolltext Help 25 78
+      ;;
+      esac
+
+else
+    echo "You chose Cancel."
+fi
