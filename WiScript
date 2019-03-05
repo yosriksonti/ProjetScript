@@ -94,6 +94,10 @@ case "$Choix" in
 	   "
 		echo -e "\n \t \t   ${YELLOW}Thank you for using WiScript Tool ${RED}<3"
 		exit
+		;;
+		*)
+		echo "choix inconnus ! "
+		exit
 	  ;;
 
 esac

@@ -1,5 +1,11 @@
 #!/bin/bash
+source option-l.sh
+source option-lsort.sh
+source option-d.sh
+source option-c.sh
 source option-h.sh
+
+
 logo="
 
                  _    _  __  ___   ___  ____  __  ____  ___
@@ -20,16 +26,45 @@ if [ $exitstatus = 0 ]; then
 
     case "$OPTION" in
       "1")
-      echo "test1"
+      cnt=$(option-l)
+      whiptail --title "List AP" --msgbox "$cnt" 20 78
       ;;
       "2")
-      echo "test2"
+      cnt=$(option-lsort)
+      whiptail --title "List AP sort" --msgbox "$cnt" 20 78
       ;;
       "3")
-      echo "test2"
+      if (whiptail --title "WiScript" --yesno "Êtes-vous sûr de fermer NetworkManager (yes/no) ." 8 78); then
+        {
+    for ((i = 0 ; i <= 100 ; i+=5)); do
+        sleep 0.1
+        echo $i
+    done
+}    | whiptail --gauge "Veuillez patienter..." 6 50 0
+      option-d
+      whiptail --title "WiScript" --msgbox "Désactivé avec success !" 8 50
+      else
+
+        whiptail --title "WiScript" --msgbox "Operation a annule !" 8 50
+
+      fi
+
       ;;
       "4")
-      echo "test2"
+      Name=$(whiptail --inputbox "Enter SSID : " 8 78 SSID --title "WiScript" 3>&1 1>&2 2>&3)
+      exitstatus=$?
+      if [ $exitstatus = 0 ]; then
+        PASSWORD=$(whiptail --passwordbox "Enter password" 8 78 --title "WiScript" 3>&1 1>&2 2>&3)
+        exitstatus1=$?
+        if [ $exitstatus1 = 0 ]; then
+            wifi=$(nmcli d wifi connect $Name password $PASSWORD)
+        else
+          whiptail --title "WiScript" --msgbox "Operation a annule !" 8 50
+        fi
+      else
+        whiptail --title "WiScript" --msgbox "Operation a annule !" 8 50
+      fi
+
       ;;
       "5")
       whiptail --textbox --scrolltext Help 25 78
