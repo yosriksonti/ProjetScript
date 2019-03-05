@@ -11,6 +11,7 @@ choice="$(zenity --width=600 --height=250 --list --column="""" --title="WiScript
 "List available Acces Points ordered by signal intensity." \
 "Diactivate NetworkManager service." \
 "Manually configur Acces point's acces." \
+"Check update." \
 "Help." \ )"
 case "${choice}" in
 "List available Acces Points." )
@@ -27,6 +28,10 @@ zenity --width=200 --height=100 --info --text="Networking Disactivated." "" --ti
 ;;
 "Manually configur Acces point's acces." )
 option-c
+;;
+"Check update." )
+Function=$(update)
+zenity --width=600 --height=100 --info --text="$Function" "" --title="WiScript" \
 ;;
 "Help." )
 Function=$(Help)

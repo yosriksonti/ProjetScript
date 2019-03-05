@@ -19,7 +19,8 @@ OPTION=$(whiptail --title "WiScript tool" --menu "     $logo \n \n" 25 78 8 \
 "2" "List available Acces Points ordered by signal intensity." \
 "3" "Diactivate NetworkManager service." \
 "4" "Manually configur Acces point's acces." \
-"5" "Help."  3>&1 1>&2 2>&3)
+"5" "Check update" \
+"6" "Help."  3>&1 1>&2 2>&3)
 
 exitstatus=$?
 if [ $exitstatus = 0 ]; then
@@ -67,6 +68,9 @@ if [ $exitstatus = 0 ]; then
 
       ;;
       "5")
+      Updatec=$(update)
+      whiptail --title "List AP" --msgbox "$Updatec" 20 78      ;;
+      "6")
       whiptail --textbox --scrolltext Help 25 78
       ;;
       esac
