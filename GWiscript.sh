@@ -7,25 +7,25 @@ source option-h.sh
 
 while true; do
 choice="$(zenity --width=600 --height=250 --list --column="""" --title="WiScript" \
-"Lister les différents points d acces wifi." \
-"Lister les points d acces wifi par ordre decroissant d intensite de signal." \
-"Disactiver le service NetworkManager." \
-"Configurer manuellement l accès a un point d acces." \
+"List available Acces Points." \
+"List available Acces Points ordered by signal intensity." \
+"Diactivate NetworkManager service." \
+"Manually configur Acces point's acces." \
 "Help." \ )"
 case "${choice}" in
-"Lister les différents points d acces wifi." )
+"List available Acces Points." )
 Function=$(option-l)
 zenity --width=600 --height=300 --info --text="$Function" "" --title="WiScript" \
 ;;
-"Lister les points d acces wifi par ordre decroissant d intensite de signal." )
+"List available Acces Points ordered by signal intensity." )
 Function=$(option-lsort)
 zenity --width=600 --height=300 --info --text="$Function" "" --title="WiScript" \
 ;;
-"Disactiver le service NetworkManager." )
+"Diactivate NetworkManager service." )
 Function=$(option-d)
 zenity --width=200 --height=100 --info --text="Networking Disactivated." "" --title="WiScript" \
 ;;
-"Configurer manuellement l accès a un point d acces." )
+"Manually configur Acces point's acces." )
 option-c
 ;;
 "Help." )

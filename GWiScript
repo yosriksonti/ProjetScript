@@ -15,10 +15,10 @@ logo="
 "
 
 OPTION=$(whiptail --title "WiScript tool" --menu "     $logo \n \n" 25 78 8 \
-"1" "Lister les différents AP." \
-"2" "Lister les AP par ordre decroissant d'intensite de signal." \
-"3" "Disactiver le service NetworkManager." \
-"4" "Configurer manuellement l'accès a un AP." \
+"1" "List available Acces Points." \
+"2" "List available Acces Points ordered by signal intensity." \
+"3" "Diactivate NetworkManager service." \
+"4" "Manually configur Acces point's acces." \
 "5" "Help."  3>&1 1>&2 2>&3)
 
 exitstatus=$?
@@ -40,12 +40,12 @@ if [ $exitstatus = 0 ]; then
         sleep 0.1
         echo $i
     done
-}    | whiptail --gauge "Veuillez patienter..." 6 50 0
+}    | whiptail --gauge "Please wait..." 6 50 0
       option-d
-      whiptail --title "WiScript" --msgbox "Désactivé avec success !" 8 50
+      whiptail --title "WiScript" --msgbox "Successfully Diactivated !" 8 50
       else
 
-        whiptail --title "WiScript" --msgbox "Operation a annule !" 8 50
+        whiptail --title "WiScript" --msgbox "Operation Canceled !" 8 50
 
       fi
 
@@ -59,10 +59,10 @@ if [ $exitstatus = 0 ]; then
         if [ $exitstatus1 = 0 ]; then
             wifi=$(nmcli d wifi connect $Name password $PASSWORD)
         else
-          whiptail --title "WiScript" --msgbox "Operation a annule !" 8 50
+          whiptail --title "WiScript" --msgbox "Operation Canceled !" 8 50
         fi
       else
-        whiptail --title "WiScript" --msgbox "Operation a annule !" 8 50
+        whiptail --title "WiScript" --msgbox "Operation Canceled !" 8 50
       fi
 
       ;;
