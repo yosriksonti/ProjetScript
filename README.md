@@ -9,3 +9,27 @@
 
 Simple Script with GUI for **Network Management**
 
+### Usage
+
+Run :
+```sh
+$ ./WiScript
+```
+Run text user interface :
+```sh
+$ ./GWiScript
+```
+Run graphic user interface :
+```sh
+$ ./GWiScript.sh
+```
+
+License
+----
+
+MIT
+
+**Free Software, Hell Yeah!**
+
+Olympians Development Team
+www.olympians.ovh
