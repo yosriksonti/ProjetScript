@@ -1,5 +1,6 @@
-# w15cr1p7
 
+
+# w15cr1p7 
 
                  _    _  __  ___   ___  ____  __  ____  ___
                 ( \/\/ )/  )| __) / __)(  _ \/  )(  _ \(__ )
@@ -8,6 +9,8 @@
                 
 
 Simple Script with GUI for **Network Management**
+
+[![Build Status](https://travis-ci.com/bassouma21001/w15cr1p7.svg?branch=master)](https://travis-ci.com/bassouma21001/w15cr1p7)
 
 ### Usage
 
